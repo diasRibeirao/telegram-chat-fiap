@@ -10,7 +10,7 @@ Esse bot foi desenvolvido pelo **grupo 2**, membros:\
 **Emerson - 341060\
 Marco Antonio - 341785**\
 **Caio 341245**\
-Alan Coimbra 341622**
+**Alan Coimbra 341622**
 
 ## Comandos
 
