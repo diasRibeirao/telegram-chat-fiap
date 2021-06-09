@@ -9,14 +9,14 @@ Projeto para avaliação final da disciplina **Java Platform** com o professor *
 Esse bot foi desenvolvido pelo **grupo 2**, membros:\
 **Emerson - 341060\
 Marco Antonio - 341785**\
-**Caio 341245**\
+**Caio 341245**
 
 ## Comandos
 
-Foi desenvolvido um chatbot usando o telegram. O chatbot possui os seguintes comandos:
-**/sobre** - Retorna informações sobre o chatbot
-**/datahora** - Retorna informações sobre a data e hora
-**/climatempo** - Retorna informações sobre o clima na cidade de São Paulo
+Foi desenvolvido um chatbot usando o telegram. O chatbot possui os seguintes comandos:\
+**/sobre** - Retorna informações sobre o chatbot\
+**/datahora** - Retorna informações sobre a data e hora\
+**/climatempo** - Retorna informações sobre o clima na cidade de São Paulo\
 **/ajuda** - Retorna informações sobre os comandos disponíveis no chatbot. 
 
 ## Como interagir com o bot
