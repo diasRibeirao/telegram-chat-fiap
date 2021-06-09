@@ -29,7 +29,7 @@ Para esse bot foi utilizado **Java 8** , Spring boot versão **3.0.2.RELEASE**, 
 
 ## Configurações para rodar o bot
 
-Para utilizar o bot na sua máquina é necessário incluir o seu token. O mesmo pode ser gerado através do BotFather no telegram, caso queira mais informações de como gerar [clique aqui](https://core.telegram.org/bots#6-botfather)
-Após gerar o token edite o arquivo **config.properties** na pasta resources colando o token no campo **telegram.bot.token**.
-Para utilizar os recursos de previsão do tempo é necessário se cadastrar na plataforma da clima tempo, para informações de como gerar o token, [clique aqui.](https://advisor.climatempo.com.br/) 
+Para utilizar o bot na sua máquina é necessário incluir o seu token. O mesmo pode ser gerado através do BotFather no telegram, caso queira mais informações de como gerar [clique aqui](https://core.telegram.org/bots#6-botfather)\
+Após gerar o token edite o arquivo **config.properties** na pasta resources colando o token no campo **telegram.bot.token**.\
+Para utilizar os recursos de previsão do tempo é necessário se cadastrar na plataforma da clima tempo, para informações de como gerar o token, [clique aqui.](https://advisor.climatempo.com.br/) \
 Após gerar o token edite o arquivo **config.properties** na pasta resources colando o token no campo **climatempo.token**
