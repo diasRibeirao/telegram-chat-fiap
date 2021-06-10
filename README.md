@@ -18,6 +18,7 @@ Foi desenvolvido um chatbot usando o telegram. O chatbot possui os seguintes com
 **/sobre** - Retorna informações sobre o chatbot\
 **/datahora** - Retorna informações sobre a data e hora\
 **/climatempo** - Retorna informações sobre o clima na cidade de São Paulo\
+**/validaremail** - Valida se um email é válido\
 **/ajuda** - Retorna informações sobre os comandos disponíveis no chatbot. 
 
 ## Como interagir com o bot
