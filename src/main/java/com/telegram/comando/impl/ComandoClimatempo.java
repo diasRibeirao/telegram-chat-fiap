@@ -15,6 +15,11 @@ import com.telegram.modelo.ChatFiap;
 import com.telegram.utils.Constantes;
 import com.telegram.utils.Utils;
 
+/**
+ * 
+ * Classe respons√°vel por fazer a chamada ao sistema da climatempo
+ *
+ */
 public class ComandoClimatempo implements Comando {
 
 	@Override
@@ -34,20 +39,20 @@ public class ComandoClimatempo implements Comando {
 				JSONObject jsonHoje = new JSONObject(array.getJSONObject(0).get("temperature").toString());
 
 				mensagem.append("Hoje").append(" - ").append(array.getJSONObject(0).get("date_br")).append("\n");
-				mensagem.append("Temperatura: min. ").append(jsonHoje.get("min")).append(" ∞C   ");
-				mensagem.append("m·x. ").append(jsonHoje.get("max")).append(" ∞C \n\n");
+				mensagem.append("Temperatura: min. ").append(jsonHoje.get("min")).append(" C   ");
+				mensagem.append("m√°x. ").append(jsonHoje.get("max")).append(" C \n\n");
 
 				JSONObject jsonAmanha = new JSONObject(array.getJSONObject(1).get("temperature").toString());
 
-				mensagem.append("Amanh„").append(" - ").append(array.getJSONObject(1).get("date_br")).append("\n");
-				mensagem.append("Temperatura: min. ").append(jsonAmanha.get("min")).append(" ∞C   ");
-				mensagem.append("m·x. ").append(jsonAmanha.get("max")).append(" ∞C \n");
+				mensagem.append("Amanh√£").append(" - ").append(array.getJSONObject(1).get("date_br")).append("\n");
+				mensagem.append("Temperatura: min. ").append(jsonAmanha.get("min")).append(" C   ");
+				mensagem.append("m√°x. ").append(jsonAmanha.get("max")).append(" C \n");
 			} else {
 				throw new Exception();
 			}
 
 		} catch (Exception e) {
-			mensagem.append("N„o È possÌvel acessar o climatempo.\nTente novamente mais tarde.");
+			mensagem.append("N√£o √© poss√≠vel acessar o climatempo.\nTente novamente mais tarde.");
 		}
 
 		return bot.execute(new SendMessage(chat.getChatId(), mensagem.toString()));

@@ -4,6 +4,9 @@ import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.util.Properties;
 
+/*
+ * classe com metodos utilitarios do projeto 
+ */
 public class Utils {
 	private static Properties props;
 

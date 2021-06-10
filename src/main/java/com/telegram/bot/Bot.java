@@ -13,11 +13,24 @@ import com.telegram.comando.Comando;
 import com.telegram.comando.ComandoFactory;
 import com.telegram.modelo.ChatFiap;
 
+
+
+/**
+ * Metodo principal do robo
+ *
+ */
 public class Bot {
 
 	private TelegramBot bot;
 
 	private int lastUpdateId = 0;
+
+	/** 
+	 * 
+	 * @param token
+	 * token recuperado da resources 
+	 * metodo responsavel pela criacao do telegrambot
+	 */
 
 	public Bot(String token) {
 		System.out.println("Iniciando bot grupo 2 java...");
@@ -29,6 +42,9 @@ public class Bot {
 		this.bot = new TelegramBot(token);
 	}
 
+	/**
+	 * metodo que executa o robo, recupera as mensagens e responde para o usuario
+	 */
 	public void executar() {
 		System.out.println("Bot grupo 2 java iniciado...");
 
@@ -63,7 +79,13 @@ public class Bot {
 
 		}
 	}
-
+	/**
+	 * 
+	 * @param chat
+	 * @throws Exception
+	 * 
+	 * metodo responsavel por enviar mensagem ao usuario
+	 */
 	private void enviarMensagem(ChatFiap chat) throws Exception {
 		Comando comando = ComandoFactory.getComando(chat.getMessage());
 		SendResponse sendResponse = comando.processar(this.bot, chat);

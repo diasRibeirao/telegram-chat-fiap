@@ -7,12 +7,18 @@ import com.telegram.comando.Comando;
 import com.telegram.comando.ComandoEnum;
 import com.telegram.modelo.ChatFiap;
 
+/**
+ * 
+ * classe responsavel por processar a mensagem do usuario e retornar a lista de comandos possiveis. 
+ *
+ */
 public class ComandoAjuda implements Comando {
 
+	
 	@Override
 	public SendResponse processar(TelegramBot bot, ChatFiap chat) throws Exception {
 		StringBuilder mensagem = new StringBuilder();
-		mensagem.append("Este chat contém os seguintes comandos disponíveis:");
+		mensagem.append("Este chat contï¿½m os seguintes comandos disponï¿½veis:");
 		mensagem.append(ComandoEnum.exibirComandos());
 
 		return bot.execute(new SendMessage(chat.getChatId(), mensagem.toString()));
