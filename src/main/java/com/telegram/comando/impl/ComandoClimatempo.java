@@ -15,11 +15,6 @@ import com.telegram.modelo.ChatFiap;
 import com.telegram.utils.Constantes;
 import com.telegram.utils.Utils;
 
-/**
- * 
- * Classe responsável por fazer a chamada ao sistema da climatempo
- *
- */
 public class ComandoClimatempo implements Comando {
 
 	@Override
@@ -39,14 +34,14 @@ public class ComandoClimatempo implements Comando {
 				JSONObject jsonHoje = new JSONObject(array.getJSONObject(0).get("temperature").toString());
 
 				mensagem.append("Hoje").append(" - ").append(array.getJSONObject(0).get("date_br")).append("\n");
-				mensagem.append("Temperatura: min. ").append(jsonHoje.get("min")).append(" C   ");
-				mensagem.append("máx. ").append(jsonHoje.get("max")).append(" C \n\n");
+				mensagem.append("Temperatura: min. ").append(jsonHoje.get("min")).append(" º C   ");
+				mensagem.append("máx. ").append(jsonHoje.get("max")).append(" °C \n\n");
 
 				JSONObject jsonAmanha = new JSONObject(array.getJSONObject(1).get("temperature").toString());
 
 				mensagem.append("Amanhã").append(" - ").append(array.getJSONObject(1).get("date_br")).append("\n");
-				mensagem.append("Temperatura: min. ").append(jsonAmanha.get("min")).append(" C   ");
-				mensagem.append("máx. ").append(jsonAmanha.get("max")).append(" C \n");
+				mensagem.append("Temperatura: min. ").append(jsonAmanha.get("min")).append(" °C   ");
+				mensagem.append("máx. ").append(jsonAmanha.get("max")).append(" °C \n");
 			} else {
 				throw new Exception();
 			}
@@ -54,6 +49,8 @@ public class ComandoClimatempo implements Comando {
 		} catch (Exception e) {
 			mensagem.append("Não é possível acessar o climatempo.\nTente novamente mais tarde.");
 		}
+		
+		chat.setCommand(null);
 
 		return bot.execute(new SendMessage(chat.getChatId(), mensagem.toString()));
 	}

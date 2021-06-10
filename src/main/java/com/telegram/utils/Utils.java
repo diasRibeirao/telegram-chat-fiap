@@ -3,10 +3,8 @@ package com.telegram.utils;
 import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.util.Properties;
+import java.util.regex.Pattern;
 
-/*
- * classe com metodos utilitarios do projeto 
- */
 public class Utils {
 	private static Properties props;
 
@@ -40,5 +38,17 @@ public class Utils {
 
 	public static String get(String key) {
 		return props.getProperty(key);
+	}
+
+	public static Boolean validarEmail(String email) {
+		if (email == null || email.equals("")) {
+			return false;
+		}
+
+		if (Pattern.compile(Constantes.REGEX_EMAIL).matcher(email).matches()) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }

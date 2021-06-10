@@ -8,11 +8,6 @@ import com.telegram.modelo.ChatFiap;
 import com.telegram.utils.Constantes;
 import com.telegram.utils.Utils;
 
-/**
- * 
- * Comando default, saudacao ao usuario. 
- *
- */
 public class ComandoDefault implements Comando {
 
 	@Override
@@ -21,10 +16,13 @@ public class ComandoDefault implements Comando {
 		
 		if (chat.getMessage().matches(Constantes.ENTRADA_SAUDACOES)) {
 			mensagem.append(String.format("Olá %s! %s, seja bem vindo ao nosso chat", chat.getFirstName(), Utils.getSaudacao()));
+			mensagem.append("\nGostaria de pedir /ajuda?");
 		} else {
 			mensagem.append("Desculpe! Não consegui entender. \nGostaria de pedir /ajuda?");
 		}
 	
+		chat.setCommand(null);
+		
 		return bot.execute(new SendMessage(chat.getChatId(), mensagem.toString()));
 	}
 }

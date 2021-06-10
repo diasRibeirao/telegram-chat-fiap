@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.telegram"},{"l":"com.telegram.bot"},{"l":"com.telegram.comando"},{"l":"com.telegram.comando.impl"},{"l":"com.telegram.modelo"},{"l":"com.telegram.utils"}];updateSearchResults();

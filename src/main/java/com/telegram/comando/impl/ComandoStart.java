@@ -7,10 +7,6 @@ import com.telegram.comando.Comando;
 import com.telegram.comando.ComandoEnum;
 import com.telegram.modelo.ChatFiap;
 
-/**
- * start do robo, exibe as frases de boas vindas e comandos disponiveis. 
- *
- */
 public class ComandoStart implements Comando {
 
 	@Override
@@ -20,6 +16,8 @@ public class ComandoStart implements Comando {
 		mensagem.append("este projeto tem por finalidade a avaliação final da disciplina de java, com o professor Rafael Tsuji Matsuyama.\n");
 		mensagem.append("Este bot contém os seguintes comandos disponíveis:");
 		mensagem.append(ComandoEnum.exibirComandos());
+		
+		chat.setCommand(null);
 		
 		return bot.execute(new SendMessage(chat.getChatId(), mensagem.toString()));
 	}

@@ -1,5 +1,6 @@
 package com.telegram.bot;
 
+import java.util.HashMap;
 import java.util.List;
 
 import com.pengrad.telegrambot.TelegramBot;
@@ -13,24 +14,13 @@ import com.telegram.comando.Comando;
 import com.telegram.comando.ComandoFactory;
 import com.telegram.modelo.ChatFiap;
 
-
-
-/**
- * Metodo principal do robo
- *
- */
 public class Bot {
 
 	private TelegramBot bot;
 
 	private int lastUpdateId = 0;
-
-	/** 
-	 * 
-	 * @param token
-	 * token recuperado da resources 
-	 * metodo responsavel pela criacao do telegrambot
-	 */
+	
+	private HashMap<Long, ChatFiap> chats = new HashMap<Long, ChatFiap>();
 
 	public Bot(String token) {
 		System.out.println("Iniciando bot grupo 2 java...");
@@ -42,9 +32,6 @@ public class Bot {
 		this.bot = new TelegramBot(token);
 	}
 
-	/**
-	 * metodo que executa o robo, recupera as mensagens e responde para o usuario
-	 */
 	public void executar() {
 		System.out.println("Bot grupo 2 java iniciado...");
 
@@ -71,7 +58,7 @@ public class Bot {
 				this.getUpdates(update.message().chat().id());
 
 				try {
-					enviarMensagem(new ChatFiap(update));
+					enviarMensagem(getChat(update));
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -79,15 +66,9 @@ public class Bot {
 
 		}
 	}
-	/**
-	 * 
-	 * @param chat
-	 * @throws Exception
-	 * 
-	 * metodo responsavel por enviar mensagem ao usuario
-	 */
+	
 	private void enviarMensagem(ChatFiap chat) throws Exception {
-		Comando comando = ComandoFactory.getComando(chat.getMessage());
+		Comando comando = ComandoFactory.getComando(chat);
 		SendResponse sendResponse = comando.processar(this.bot, chat);
 
 		// Verificacao de mensagem enviada com sucesso.
@@ -104,4 +85,17 @@ public class Bot {
 	private void setLastUpdateId(Integer updateId) {
 		this.lastUpdateId = updateId + 1;
 	}
+	
+	private ChatFiap getChat(Update update) {
+		Long chatId = update.message().chat().id();
+
+		if (!this.chats.containsKey(chatId)) {
+			this.chats.put(chatId, new ChatFiap(update));
+		} else {
+			this.chats.get(chatId).setMessage(update.message().text().toLowerCase().trim().replaceAll("\\s+", " "));
+		}
+
+		return this.chats.get(chatId);
+	}
+
 }

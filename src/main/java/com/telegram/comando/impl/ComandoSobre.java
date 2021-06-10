@@ -6,9 +6,6 @@ import com.pengrad.telegrambot.response.SendResponse;
 import com.telegram.comando.Comando;
 import com.telegram.modelo.ChatFiap;
 
-/**
- * about do projeto e do grupo. 
- */
 public class ComandoSobre implements Comando {
 
 	@Override
@@ -17,6 +14,8 @@ public class ComandoSobre implements Comando {
 		mensagem.append("MBA EM FULL STACK DEVELOPMENT - DESIGN, ENGINEERING & DEPLOYMENT\n");
 		mensagem.append("JAVA PLATFORM - RAFAEL TSUJI MATSUYAMA\n");
 		mensagem.append("Telegram Bot: Avaliação Total da Disciplina");
+		
+		chat.setCommand(null);
 		
 		return bot.execute(new SendMessage(chat.getChatId(), mensagem.toString()));
 	}

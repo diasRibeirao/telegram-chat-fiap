@@ -2,20 +2,19 @@ package com.telegram.modelo;
 
 import com.pengrad.telegrambot.model.Update;
 
-/*
- * classe do chatfiap com informacoes do chat aberto
- */
 public class ChatFiap {
 	private Long chatId;
 	private String message;
 	private String firstName;
 	private String lastName;
+	private String command;
 
 	public ChatFiap(Update update) {
 		this.chatId = update.message().chat().id();
 		this.message = update.message().text().toLowerCase().trim().replaceAll("\\s+", " ");
 		this.firstName = update.message().from().firstName();
 		this.lastName = update.message().from().lastName();
+		this.command = null;
 	}
 
 	public Long getChatId() {
@@ -48,6 +47,14 @@ public class ChatFiap {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+	public String getCommand() {
+		return command;
+	}
+
+	public void setCommand(String command) {
+		this.command = command;
 	}
 
 }

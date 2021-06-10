@@ -35,6 +35,5 @@
 			<artifactId>json</artifactId>
 			<version>20210307</version>
 		</dependency>
-
 	</dependencies>
 </project>

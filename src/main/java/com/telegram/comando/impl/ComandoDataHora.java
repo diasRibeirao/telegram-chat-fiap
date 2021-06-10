@@ -10,11 +10,6 @@ import com.telegram.comando.Comando;
 import com.telegram.modelo.ChatFiap;
 import com.telegram.utils.Utils;
 
-/**
- * metodo responsavel por retornar a data e hora 
- * 
- *
- */
 public class ComandoDataHora implements Comando {
 
 	@Override
@@ -24,6 +19,8 @@ public class ComandoDataHora implements Comando {
 		mensagem.append(", ");
 		mensagem.append(LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")));
 
+		chat.setCommand(null);
+		
 		return bot.execute(new SendMessage(chat.getChatId(), mensagem.toString()));
 	}
 
