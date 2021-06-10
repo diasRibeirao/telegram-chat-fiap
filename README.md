@@ -26,7 +26,7 @@ Foi desenvolvido um chatbot usando o telegram. O chatbot possui os seguintes com
 Para acessar o bot é necessário ter o telegram. Para interagir com ele só acessar a url [Bot](t.me/JavaGroup2Bot)
 
 **Stack utilizada**
-Para esse bot foi utilizado **Java 8** , Spring boot versão **3.0.2.RELEASE**, a API de bots do Telegram e o Maven. 
+Para esse bot foi utilizado **Java 8**, a API de bots do Telegram e o Maven. 
 
 ## Configurações para rodar o bot
 
