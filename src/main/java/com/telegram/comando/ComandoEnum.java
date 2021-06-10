@@ -1,13 +1,21 @@
 package com.telegram.comando;
 
+/**
+ * 
+ * enum dos comandos possiveis de serem executados no bot e as suas descricoes
+ *
+ */
 public enum ComandoEnum {
 
+	/**
+	 * enum das opcoes e string retornada para o usuario. 
+	 */
 	START("/start", "Inicio o chat com as boas vindas", true), 
 	SOBRE("/sobre", "Informa sobre o chat", true),
 	DATA_HORA("/datahora", "Informa a data e hora", true),
-	CLIMATEMPO("/climatempo", "Informa a temperatura de hoje e amanhã (Cidade de São Paulo)", true),
-	AJUDA("/ajuda", "Informa os comandos disponíveis", true),
-	DEFAULT("/deafult", "Enviar mensagens caso não seja nenhum comando acima", false);
+	CLIMATEMPO("/climatempo", "Informa a temperatura de hoje e amanhï¿½ (Cidade de Sï¿½o Paulo)", true),
+	AJUDA("/ajuda", "Informa os comandos disponï¿½veis", true),
+	DEFAULT("/deafult", "Enviar mensagens caso nï¿½o seja nenhum comando acima", false);
 
 	private String codigo;
 	private String descricao;

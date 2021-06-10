@@ -7,6 +7,11 @@ import com.telegram.comando.impl.ComandoDefault;
 import com.telegram.comando.impl.ComandoSobre;
 import com.telegram.comando.impl.ComandoStart;
 
+/**
+ * 
+ * switch dos comandos possiveis para o usuario. 
+ *
+ */
 public class ComandoFactory {
 
 	public static Comando getComando(String mensagem) {

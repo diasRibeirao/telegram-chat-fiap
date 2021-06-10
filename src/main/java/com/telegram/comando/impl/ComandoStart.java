@@ -7,14 +7,18 @@ import com.telegram.comando.Comando;
 import com.telegram.comando.ComandoEnum;
 import com.telegram.modelo.ChatFiap;
 
+/**
+ * start do robo, exibe as frases de boas vindas e comandos disponiveis. 
+ *
+ */
 public class ComandoStart implements Comando {
 
 	@Override
 	public SendResponse processar(TelegramBot bot, ChatFiap chat) throws Exception {
 		StringBuilder mensagem = new StringBuilder();
 		mensagem.append("Bem vindo ao chatobot do grupo 2 do MBA em full stack development - design, engineering & deployment, ");
-		mensagem.append("este projeto tem por finalidade a avaliação final da disciplina de java, com o professor Rafael Tsuji Matsuyama.\n");
-		mensagem.append("Este bot contém os seguintes comandos disponíveis:");
+		mensagem.append("este projeto tem por finalidade a avaliaÃ§Ã£o final da disciplina de java, com o professor Rafael Tsuji Matsuyama.\n");
+		mensagem.append("Este bot contÃ©m os seguintes comandos disponÃ­veis:");
 		mensagem.append(ComandoEnum.exibirComandos());
 		
 		return bot.execute(new SendMessage(chat.getChatId(), mensagem.toString()));

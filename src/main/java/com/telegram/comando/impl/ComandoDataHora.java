@@ -10,6 +10,11 @@ import com.telegram.comando.Comando;
 import com.telegram.modelo.ChatFiap;
 import com.telegram.utils.Utils;
 
+/**
+ * metodo responsavel por retornar a data e hora 
+ * 
+ *
+ */
 public class ComandoDataHora implements Comando {
 
 	@Override
