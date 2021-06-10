@@ -7,6 +7,10 @@ import com.telegram.comando.Comando;
 import com.telegram.comando.ComandoEnum;
 import com.telegram.modelo.ChatFiap;
 
+/**
+ * responsavel por exibir as mensagens de ajuda para os comandos
+ *
+ */
 public class ComandoAjuda implements Comando {
 
 	@Override

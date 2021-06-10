@@ -8,6 +8,9 @@ import com.telegram.modelo.ChatFiap;
 import com.telegram.utils.Constantes;
 import com.telegram.utils.Utils;
 
+/**
+ * metodo padrao, sempre que o usuario digitar algo que o robo nao entende ou for uma interacao de saudacao ira cair nesse metodo. 
+ */
 public class ComandoDefault implements Comando {
 
 	@Override

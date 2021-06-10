@@ -5,6 +5,9 @@ import java.time.LocalDateTime;
 import java.util.Properties;
 import java.util.regex.Pattern;
 
+/**
+ * classe com metodos utilitarios como para pegar o dia da semana, validar o email e pegar propriedade da resources
+ */
 public class Utils {
 	private static Properties props;
 

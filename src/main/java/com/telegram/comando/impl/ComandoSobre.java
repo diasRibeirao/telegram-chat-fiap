@@ -6,6 +6,9 @@ import com.pengrad.telegrambot.response.SendResponse;
 import com.telegram.comando.Comando;
 import com.telegram.modelo.ChatFiap;
 
+/**
+ * metodo responsavel por trazer informacoes sobre o bot
+ */
 public class ComandoSobre implements Comando {
 
 	@Override

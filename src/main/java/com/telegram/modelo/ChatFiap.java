@@ -2,6 +2,9 @@ package com.telegram.modelo;
 
 import com.pengrad.telegrambot.model.Update;
 
+/**
+ * classe responsavel pela criacao do objeto de chat. 
+ */
 public class ChatFiap {
 	private Long chatId;
 	private String message;

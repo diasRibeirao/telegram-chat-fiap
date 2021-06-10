@@ -9,6 +9,10 @@ import com.telegram.comando.impl.ComandoSobre;
 import com.telegram.comando.impl.ComandoStart;
 import com.telegram.modelo.ChatFiap;
 
+/**
+ * classe responsavel por fazer o switch do evento que o usuario escolheu, dependendo do comando ele envia para o metodo correto
+ *
+ */
 public class ComandoFactory {
 
 	public static Comando getComando(ChatFiap chat) {
