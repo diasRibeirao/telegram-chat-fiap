@@ -54,7 +54,7 @@ public class Bot {
 			// off-set (limite inicial)
 			List<Update> updates = this.bot.execute(new GetUpdates().limit(100).offset(this.lastUpdateId)).updates();
 
-			if (updates.isEmpty()) {
+			if (updates == null || updates.isEmpty()) {
 				continue;
 			}
 
