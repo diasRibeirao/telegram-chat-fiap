@@ -14,6 +14,11 @@ import com.telegram.comando.Comando;
 import com.telegram.comando.ComandoFactory;
 import com.telegram.modelo.ChatFiap;
 
+/**
+ * 
+ * classe responsavel pela criacao do bot e seus metodos
+ *
+ */
 public class Bot {
 
 	private TelegramBot bot;

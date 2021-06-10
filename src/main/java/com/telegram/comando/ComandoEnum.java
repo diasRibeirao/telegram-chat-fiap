@@ -1,5 +1,9 @@
 package com.telegram.comando;
 
+/**
+ * enum para listagem dos metodos disponiveis para o usuario com a respectiva string de resposta 
+ *
+ */
 public enum ComandoEnum {
 
 	START("/start", "Inicio o chat com as boas vindas", true), 

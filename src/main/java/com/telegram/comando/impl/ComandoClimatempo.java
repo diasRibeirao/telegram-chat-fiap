@@ -15,6 +15,9 @@ import com.telegram.modelo.ChatFiap;
 import com.telegram.utils.Constantes;
 import com.telegram.utils.Utils;
 
+/**
+ * metodo responsavel pela interacao com a API do clima tempo e resposta para o usuario 
+ */
 public class ComandoClimatempo implements Comando {
 
 	@Override

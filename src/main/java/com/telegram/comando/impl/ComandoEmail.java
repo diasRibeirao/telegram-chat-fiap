@@ -8,6 +8,9 @@ import com.telegram.comando.ComandoEnum;
 import com.telegram.modelo.ChatFiap;
 import com.telegram.utils.Utils;
 
+/**
+ * metodo responavel por validar se um email é valido utilizado regex. 
+ */
 public class ComandoEmail implements Comando {
 
 	@Override

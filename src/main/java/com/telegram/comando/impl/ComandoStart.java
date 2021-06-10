@@ -7,6 +7,9 @@ import com.telegram.comando.Comando;
 import com.telegram.comando.ComandoEnum;
 import com.telegram.modelo.ChatFiap;
 
+/**
+ * metodo responsavel pela primeira interacao com o usuario, retorna as informacoes e comandos. 
+ */
 public class ComandoStart implements Comando {
 
 	@Override
